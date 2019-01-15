@@ -1,0 +1,262 @@
+@import url("https://fonts.googleapis.com/css?family=PT+Mono");
+/*
+@mixin setColorAndHover($baseColor) {
+  color: $baseColor;
+  &:hover {
+    background: lighten($baseColor, 8%);
+  }
+}
+*/
+body,
+html {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: #ffffff;
+  font-family: "SimSun", monospace; }
+
+.masonry {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  height: 100%;
+  /*  @media screen and (min-width: 400px) {
+    height: 1600px;
+  }
+
+  @media screen and (min-width: 600px) {
+    height: 1100px;
+  }
+
+  @media screen and (min-width: 800px) {
+    height: 1300px;
+  }
+
+  @media screen and (min-width: 1100px) {
+    height: 1800px;
+  }*/ }
+
+.item {
+  box-sizing: border-box;
+  width: 18%;
+  margin-bottom: 20px;
+  counter-increment: item-counter; }
+  .item__content {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100%;
+    height: auto;
+    font-size: 40px;
+    color: #f2f2f2;
+    background: currentColor;
+    box-sizing: border-box;
+    border-radius: 5px;
+    cursor: pointer; }
+  .item .item-footer {
+    padding: 10px 10px;
+    color: #000000; }
+    .item .item-footer .title {
+      line-height: 22px; }
+    .item .item-footer .action {
+      margin: 8px 0px; }
+    .item .item-footer span {
+      cursor: pointer; }
+    .item .item-footer .like {
+      background: url("like.131c2d31.png") no-repeat center left;
+      padding-left: 20px; }
+    .item .item-footer .zan {
+      margin-left: 5px;
+      background: url("zan.4ae0a962.png") no-repeat center left;
+      padding-left: 20px; }
+    .item .item-footer .content {
+      text-indent: 2em;
+      font-size: 14px;
+      margin: 0px; }
+    .item .item-footer .author {
+      height: 100%;
+      margin: 5px 0px; }
+      .item .item-footer .author img {
+        border-radius: 24px;
+        float: left;
+        transition: all 0.5s ease;
+        cursor: pointer; }
+      .item .item-footer .author img:hover {
+        -webkit-transform: rotate(-360deg);
+                transform: rotate(-360deg); }
+      .item .item-footer .author p {
+        margin: 0;
+        float: left;
+        margin-left: 5px;
+        font-size: 12px;
+        text-align: center;
+        line-height: 24px; }
+      .item .item-footer .author a {
+        text-decoration: none;
+        color: #3c3c3c; }
+html, body, ul, p, li {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+
+.Container {
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 0.5rem;
+  -ms-grid-columns: 1.6fr 7fr 1.6fr;
+      grid-template-columns: 1.6fr 7fr 1.6fr; }
+
+.Items {
+  background: lightsalmon; }
+
+.header {
+  grid-column: 1 / 4;
+  height: 60px; }
+  .header .header-icon {
+    width: 1200px;
+    margin: 0 auto;
+    height: 100%; }
+  .header img {
+    width: auto;
+    height: 100%; }
+  .header ul {
+    display: inline-block;
+    list-style: none;
+    margin-left: 30px;
+    line-height: 60px; }
+  .header li {
+    float: left;
+    margin-right: 50px; }
+  .header a {
+    text-decoration: none;
+    color: #000; }
+  .header a:hover {
+    color: #ffffff; }
+  .header .userul {
+    float: right; }
+    .header .userul li {
+      margin-right: 0;
+      margin-left: 35px; }
+
+.sidebar {
+  grid-row: 4 / 2;
+  width: 240px;
+  background: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  max-height: 100%; }
+  .sidebar .wrapper {
+    padding-top: 30px;
+    overflow: hidden;
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box;
+    background: lightsalmon;
+    transition: width 1s ease; }
+  .sidebar .overflower {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    overflow: hidden;
+    max-width: 100%;
+    height: 100%;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    font-size: 16px; }
+    .sidebar .overflower li {
+      height: 42px;
+      line-height: 42px;
+      cursor: pointer;
+      text-align: center;
+      padding: 0 15px; }
+    .sidebar .overflower li:hover {
+      background: #3c3c3c; }
+    .sidebar .overflower a {
+      padding-left: 24px;
+      background: url("zan.4ae0a962.png") no-repeat center left; }
+    .sidebar .overflower .overflower-short {
+      display: block;
+      overflow: hidden;
+      -webkit-box-flex: 1;
+          -ms-flex-positive: 1;
+              flex-grow: 1;
+      width: 0;
+      height: 100%;
+      text-overflow: ellipsis; }
+    .sidebar .overflower .overflower-long {
+      -ms-flex-preferred-size: 100%;
+          flex-basis: 100%; }
+  .sidebar .menubottom {
+    position: fixed;
+    bottom: 0;
+    height: 42px;
+    text-align: center;
+    line-height: 42px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: all 1s ease;
+    background: url("arrow.b60c09a2.png") no-repeat center center; }
+
+.main {
+  background: #fff;
+  width: 1200px;
+  justify-self: center; }
+  @media screen and (min-width: 400px) {
+    .main {
+      height: 1600px; } }
+  @media screen and (min-width: 600px) {
+    .main {
+      height: 1100px; } }
+  @media screen and (min-width: 800px) {
+    .main {
+      height: 1300px; } }
+  @media screen and (min-width: 1100px) {
+    .main {
+      height: 1300px; } }
+
+.aside {
+  max-width: 200px;
+  background: #fff; }
+  .aside .recommend {
+    border: 1px solid #c3c3c3;
+    margin-bottom: 20px;
+    max-width: 100%; }
+    .aside .recommend ul {
+      width: auto;
+      padding-left: 15px; }
+    .aside .recommend li {
+      width: auto;
+      list-style: none;
+      margin-bottom: 8px;
+      font-size: 16px; }
+    .aside .recommend a {
+      text-decoration: none; }
+    .aside .recommend a:hover {
+      color: lightsalmon; }
+
+.footer {
+  height: 60px;
+  text-align: center;
+  line-height: 60px;
+  font-size: 18px; }

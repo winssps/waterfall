@@ -1,0 +1,186 @@
+
+html, body, ul, p, li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.Container {
+  display: grid;
+  grid-gap: 0.5rem;
+  grid-template-columns: 1.6fr 7fr 1.6fr;
+
+}
+
+.Items {
+  background: lightsalmon;
+}
+
+.header {
+  grid-column: 1 / 4;
+  height: 60px;
+  .header-icon {
+    width: 1200px;
+    margin: 0 auto;
+    height: 100%;
+  }
+  img {
+    width: auto;
+    height: 100%;
+  }
+  ul {
+    display: inline-block;
+    list-style: none;
+    margin-left: 30px;
+    line-height: 60px;
+  }
+  li {
+    float: left;
+    margin-right: 50px;
+  }
+  a {
+    text-decoration: none;
+    color: #000;
+  }
+  a:hover {
+    color: #ffffff;
+  }
+  .userul {
+    float: right;
+    li {
+      margin-right: 0;
+      margin-left: 35px;
+    }
+  }
+}
+
+.sidebar {
+  grid-row: 4 / 2;
+  width: 240px;
+  background: #fff;
+  display: flex;
+  max-height: 100%;
+
+  .wrapper {
+      padding-top: 30px;
+      overflow: hidden;
+      text-align: center;
+      width: 100%;
+      box-sizing: border-box;
+      background: lightsalmon;
+      transition: width 1s ease;
+
+  }
+
+  .overflower {
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+    max-width: 100%;
+    height: 100%;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    font-size: 16px;
+
+      li {
+        height: 42px;
+        line-height: 42px;
+        cursor: pointer;
+        text-align: center;
+        padding: 0 15px;
+      }
+
+      li:hover {
+        background: #3c3c3c;
+      }
+
+      a {
+        padding-left: 24px;
+        background: url('./component/zan.png') no-repeat center left;
+      }
+
+      .overflower-short {
+        display: block;
+        overflow: hidden;
+        flex-grow: 1;
+        width: 0;
+        height: 100%;
+        text-overflow: ellipsis;
+      }
+
+      .overflower-long {
+        flex-basis: 100%;
+      }
+  }
+
+  .menubottom{
+    position: fixed;
+    bottom: 0;
+    height: 42px;
+    text-align: center;
+    line-height: 42px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: all 1s ease;
+    background: url("./component/arrow.png") no-repeat center center;
+  }
+}
+
+.main {
+  background: #fff;
+  width: 1200px;
+  justify-self: center;
+
+  @media screen and (min-width: 400px) {
+     height: 1600px;
+   }
+
+   @media screen and (min-width: 600px) {
+     height: 1100px;
+   }
+
+   @media screen and (min-width: 800px) {
+     height: 1300px;
+   }
+
+   @media screen and (min-width: 1100px) {
+     height: 1300px;
+   }
+}
+
+.aside {
+  max-width: 200px;
+  background: #fff;
+
+
+
+  .recommend {
+    border: 1px solid #c3c3c3;
+    margin-bottom: 20px;
+    max-width: 100%;
+    ul {
+      width: auto;
+      padding-left: 15px;
+    }
+    li {
+      width: auto;
+      list-style: none;
+      margin-bottom: 8px;
+      font-size: 16px;
+    }
+    a {
+      text-decoration: none;
+    }
+    a:hover {
+      color: lightsalmon;
+    }
+  }
+}
+
+.footer {
+
+  height: 60px;
+  text-align: center;
+  line-height: 60px;
+  font-size: 18px;
+}
